@@ -9,6 +9,10 @@ class StartPageWidget extends StatefulWidget {
 }
 
 class _StartPageWidgetState extends State<StartPageWidget> {
+  void _startMed() {
+    Navigator.of(context).pushReplacementNamed('/home');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -56,12 +60,12 @@ class _StartPageWidgetState extends State<StartPageWidget> {
                   width: double.infinity,
                   child: TextButton(
                     style: TextButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 19, 24, 49),
+                      backgroundColor: const Color.fromARGB(255, 19, 24, 49),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: _startMed,
                     child: const Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Text(
