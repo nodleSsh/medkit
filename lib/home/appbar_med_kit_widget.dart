@@ -12,18 +12,21 @@ class AppBarMedKitWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Expanded(
+        Expanded(
           flex: 5,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'Med',
-                style: ThemeColor.styleLogoOne,
-              ),
-              Text(
-                'Kit',
-                style: ThemeColor.styleLogoTwo,
+              RichText(
+                text: const TextSpan(
+                    text: 'Med',
+                    style: ThemeColor.styleLogoOne,
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: 'Kit',
+                        style: ThemeColor.styleLogoTwo,
+                      )
+                    ]),
               ),
             ],
           ),
