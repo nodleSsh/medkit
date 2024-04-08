@@ -2,16 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:medkit/home/body_med_kit_scroll_widget.dart';
 import 'package:medkit/theme/theme_color.dart';
 
-class BodyMedKitWidget extends StatefulWidget {
+class BodyMedKitWidget extends StatelessWidget {
   const BodyMedKitWidget({super.key});
 
-  @override
-  State<BodyMedKitWidget> createState() => _BodyMedKitWidgetState();
-}
-
-class _BodyMedKitWidgetState extends State<BodyMedKitWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -41,6 +37,15 @@ class _BodyMedKitWidgetState extends State<BodyMedKitWidget> {
               ),
             ),
           ),
+          Expanded(
+            child: Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: const Scaffold(
+                body: BodyMedKitScrollWidget(),
+              ),
+            ),
+          )
         ],
       ),
     );
