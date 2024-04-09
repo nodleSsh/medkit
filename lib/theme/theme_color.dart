@@ -24,8 +24,13 @@ class ThemeColor {
     fontSize: 15,
   );
   static const titleColorBloc = TextStyle(
-    fontSize: 18,
+    fontSize: 17,
     color: Color.fromARGB(255, 19, 24, 49),
     fontWeight: FontWeight.w700,
+  );
+  static const connstrucTitle = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+    color: Color.fromARGB(255, 19, 24, 49),
   );
 }

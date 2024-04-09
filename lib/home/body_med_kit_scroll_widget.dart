@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medkit/home/current_medications_bloc/current_bloc.dart';
 import 'package:medkit/home/home_constructor_bloc/upcoming_bloc.dart';
 import 'package:medkit/theme/theme_color.dart';
 
@@ -22,6 +23,10 @@ class _BodyMedKitScrollWidgetState extends State<BodyMedKitScrollWidget> {
               delegate: SliverChildListDelegate(
                 <Widget>[
                   const UpcomingBloc(),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Currentbloc(),
                 ],
               ),
             ),
