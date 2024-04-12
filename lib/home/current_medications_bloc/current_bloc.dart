@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:medkit/home/current_medications_bloc/current_bloc_list.dart';
 import 'package:medkit/home/home_constructor_bloc/upcoming_bloc_title.dart';
+import 'package:medkit/resources/resources.dart';
 
 class Currentbloc extends StatefulWidget {
   const Currentbloc({super.key});
@@ -11,12 +13,66 @@ class Currentbloc extends StatefulWidget {
 class _CurrentblocState extends State<Currentbloc> {
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        UpcomingBlocTitle(
-          upcomingTitleName: 'Current medications',
-        )
-      ],
+    return Container(
+      child: const Column(
+        children: [
+          Column(
+            children: [
+              UpcomingBlocTitle(
+                upcomingTitleName: 'Current medications',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CurrentBlocList(image: AppImages.tabs, name: 'Paracethamol'),
+                  CurrentBlocList(image: AppImages.tabsbl, name: 'Vitamin C'),
+                  CurrentBlocList(image: AppImages.tabs, name: 'Vitamin B'),
+                ],
+              )
+            ],
+          ),
+          Column(
+            children: [
+              UpcomingBlocTitle(
+                upcomingTitleName: 'Find your doctor',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CurrentBlocList(image: AppImages.tabs, name: 'Paracethamol'),
+                  CurrentBlocList(image: AppImages.tabsbl, name: 'Vitamin C'),
+                  CurrentBlocList(image: AppImages.tabs, name: 'Vitamin B'),
+                ],
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }
+
+
+
+// children: [
+//         UpcomingBlocTitle(
+//           upcomingTitleName: 'Current medications',
+//         ),
+//         SizedBox(
+//           height: 10,
+//         ),
+//         Row(
+//           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//           children: [
+//             CurrentBlocList(image: AppImages.tabs, name: 'Paracethamol'),
+//             CurrentBlocList(image: AppImages.tabsbl, name: 'Vitamin C'),
+//             CurrentBlocList(image: AppImages.tabs, name: 'Vitamin B'),
+//           ],
+//         )
+//       ],
