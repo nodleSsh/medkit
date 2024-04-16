@@ -18,7 +18,7 @@ class _BodyMedKitScrollWidgetState extends State<BodyMedKitScrollWidget> {
       child: CustomScrollView(
         slivers: <Widget>[
           SliverPadding(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             sliver: SliverList(
               delegate: SliverChildListDelegate(
                 <Widget>[

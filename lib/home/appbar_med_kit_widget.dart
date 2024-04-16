@@ -4,8 +4,17 @@ import 'package:flutter/widgets.dart';
 import 'package:medkit/resources/resources.dart';
 import 'package:medkit/theme/theme_color.dart';
 
-class AppBarMedKitWidget extends StatelessWidget {
+class AppBarMedKitWidget extends StatefulWidget {
   const AppBarMedKitWidget({super.key});
+
+  @override
+  State<AppBarMedKitWidget> createState() => _AppBarMedKitWidgetState();
+}
+
+class _AppBarMedKitWidgetState extends State<AppBarMedKitWidget> {
+  void _openProfileUser() {
+    Navigator.of(context).pushReplacementNamed('/profile');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +46,7 @@ class AppBarMedKitWidget extends StatelessWidget {
             width: 60,
             height: 60,
             child: IconButton(
-              onPressed: () {},
+              onPressed: _openProfileUser,
               icon: const CircleAvatar(
                 radius: 60,
                 backgroundImage: AssetImage(AppImages.avatar),

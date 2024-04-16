@@ -45,11 +45,23 @@ class _CurrentblocState extends State<Currentbloc> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CurrentBlocList(image: AppImages.tabs, name: 'Paracethamol'),
-                  CurrentBlocList(image: AppImages.tabsbl, name: 'Vitamin C'),
-                  CurrentBlocList(image: AppImages.tabs, name: 'Vitamin B'),
+                  CurrentBlocList(
+                      image: AppImages.cardiolog, name: 'Cardiologist'),
+                  CurrentBlocList(image: AppImages.dentist, name: 'Dentist'),
+                  CurrentBlocList(image: AppImages.dna, name: 'Geneticist'),
                 ],
-              )
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CurrentBlocList(image: AppImages.nurse, name: 'Nurse'),
+                  CurrentBlocList(image: AppImages.virus, name: 'Virologist'),
+                  CurrentBlocList(image: AppImages.tabs, name: 'General'),
+                ],
+              ),
             ],
           )
         ],
