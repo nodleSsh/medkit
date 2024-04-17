@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:medkit/profile/emergency_button.dart';
 import 'package:medkit/profile/user_list.dart';
 import 'package:medkit/resources/resources.dart';
 import 'package:medkit/theme/theme_color.dart';
@@ -16,7 +17,8 @@ class UserProfilePage extends StatelessWidget {
       child: CustomScrollView(
         slivers: <Widget>[
           SliverPadding(
-            padding: const EdgeInsets.all(10),
+            padding:
+                const EdgeInsets.only(top: 10, bottom: 10, right: 20, left: 20),
             sliver: SliverList(
               delegate: SliverChildListDelegate(
                 <Widget>[
@@ -37,78 +39,134 @@ class UserProfilePage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            const Text('Homer Simpson'),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            const Text(
+                              'Homer Simpson',
+                              style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.w700,
+                                color: ThemeColor.colorText,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 15,
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  child: const Text('47 years old'),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: const Padding(
+                                    padding: EdgeInsets.only(
+                                        top: 10,
+                                        bottom: 10,
+                                        right: 15,
+                                        left: 15),
+                                    child: Text(
+                                      '47 years old',
+                                      style: ThemeColor.userProfileTitle,
+                                    ),
+                                  ),
                                 ),
                                 const SizedBox(
                                   width: 10,
                                 ),
                                 Container(
-                                  child: const Text('Male'),
-                                )
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: const Padding(
+                                    padding: EdgeInsets.only(
+                                        top: 10,
+                                        bottom: 10,
+                                        right: 15,
+                                        left: 15),
+                                    child: Text(
+                                      'Male',
+                                      style: ThemeColor.userProfileTitle,
+                                    ),
+                                  ),
+                                ),
                               ],
                             )
                           ],
                         ),
                       ),
+                      const SizedBox(
+                        height: 25,
+                      ),
                       Container(
                         child: const UserList(),
-                      ),
-                      const SizedBox(
-                        height: 30,
                       ),
                       Container(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text('Emergency contact'),
-                            SizedBox(
+                            const Text(
+                              'Emergency contact',
+                              style: ThemeColor.titleColorBloc,
+                            ),
+                            const SizedBox(
                               height: 20,
                             ),
                             Container(
-                              child: Row(
+                              child: const Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  TextButton(
-                                    style: TextButton.styleFrom(
-                                        backgroundColor: Colors.white,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                        )),
-                                    onPressed: () {},
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 10,
-                                          bottom: 10,
-                                          left: 15,
-                                          right: 15),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            width: 30,
-                                            height: 30,
-                                            decoration: BoxDecoration(
-                                              color: Colors.grey,
-                                              borderRadius:
-                                                  BorderRadius.circular(50),
-                                            ),
-                                            child: const Text('1'),
-                                          ),
-                                          const Text('Mother'),
-                                        ],
-                                      ),
-                                    ),
+                                  EmergencyButton(
+                                    num: '1',
+                                    value: 'Mother',
+                                  ),
+                                  EmergencyButton(
+                                    num: '2',
+                                    value: 'Friend',
                                   ),
                                 ],
                               ),
                             ),
                           ],
                         ),
-                      )
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Align(
+                        //вынести в отдельный виджет тк кнопка переиспользуется со стартового виджета
+                        alignment: Alignment.bottomCenter,
+                        child: SafeArea(
+                          child: Container(
+                            width: double.infinity,
+                            child: TextButton(
+                              style: TextButton.styleFrom(
+                                backgroundColor:
+                                    const Color.fromARGB(255, 19, 24, 49),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                              onPressed: () {},
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Edit details',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -120,8 +178,3 @@ class UserProfilePage extends StatelessWidget {
     );
   }
 }
-
-
-// shape: RoundedRectangleBorder(
-//                         borderRadius: BorderRadius.circular(10),
-//                       ),

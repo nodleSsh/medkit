@@ -33,4 +33,9 @@ class ThemeColor {
     fontWeight: FontWeight.w700,
     color: Color.fromARGB(255, 19, 24, 49),
   );
+  static const userProfileTitle = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w700,
+    color: ThemeColor.colorText,
+  );
 }
