@@ -14,3 +14,12 @@ class UserProfile extends StatelessWidget {
     );
   }
 }
+
+class Navi extends StatelessWidget {
+  const Navi({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}

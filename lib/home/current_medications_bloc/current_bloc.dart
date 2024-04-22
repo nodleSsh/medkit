@@ -20,6 +20,7 @@ class _CurrentblocState extends State<Currentbloc> {
             children: [
               UpcomingBlocTitle(
                 upcomingTitleName: 'Current medications',
+                path: '/current',
               ),
               SizedBox(
                 height: 10,
@@ -38,6 +39,7 @@ class _CurrentblocState extends State<Currentbloc> {
             children: [
               UpcomingBlocTitle(
                 upcomingTitleName: 'Find your doctor',
+                path: '/find',
               ),
               SizedBox(
                 height: 10,
@@ -69,22 +71,3 @@ class _CurrentblocState extends State<Currentbloc> {
     );
   }
 }
-
-
-
-// children: [
-//         UpcomingBlocTitle(
-//           upcomingTitleName: 'Current medications',
-//         ),
-//         SizedBox(
-//           height: 10,
-//         ),
-//         Row(
-//           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//           children: [
-//             CurrentBlocList(image: AppImages.tabs, name: 'Paracethamol'),
-//             CurrentBlocList(image: AppImages.tabsbl, name: 'Vitamin C'),
-//             CurrentBlocList(image: AppImages.tabs, name: 'Vitamin B'),
-//           ],
-//         )
-//       ],

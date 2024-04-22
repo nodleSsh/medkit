@@ -16,7 +16,10 @@ class _UpcomingBlocState extends State<UpcomingBloc> {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        UpcomingBlocTitle(upcomingTitleName: 'Upcoming appointments'),
+        UpcomingBlocTitle(
+          upcomingTitleName: 'Upcoming appointments',
+          path: '/upcoming',
+        ),
         SizedBox(
           height: 10,
         ),

@@ -38,4 +38,9 @@ class ThemeColor {
     fontWeight: FontWeight.w700,
     color: ThemeColor.colorText,
   );
+  static const viewTitleStyle = TextStyle(
+    fontSize: 21,
+    fontWeight: FontWeight.w600,
+    color: ThemeColor.colorText,
+  );
 }
