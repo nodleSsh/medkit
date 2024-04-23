@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medkit/resources/resources.dart';
 import 'package:medkit/theme/theme_color.dart';
-import 'package:medkit/upcoming_view/upcoming_view_list.dart';
+import 'package:medkit/upcoming_view/upcoming_view_home.dart';
 
 class UpcomingView extends StatelessWidget {
   const UpcomingView({super.key});
@@ -36,7 +36,7 @@ class UpcomingView extends StatelessWidget {
           ),
         ],
       ),
-      body: const UpcomingViewList(),
+      body: const UpcomingViewHome(),
     );
   }
 }

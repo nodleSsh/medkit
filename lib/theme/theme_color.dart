@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class ThemeColor {
   static const backgroundTheme = Color.fromARGB(255, 243, 241, 241);
   static const colorText = Color.fromARGB(255, 19, 24, 49);
+  static const elementStyle = Color.fromARGB(255, 105, 105, 105);
   static const styleLogoOne = TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.w700,
@@ -41,6 +42,11 @@ class ThemeColor {
   static const viewTitleStyle = TextStyle(
     fontSize: 21,
     fontWeight: FontWeight.w600,
+    color: ThemeColor.colorText,
+  );
+  static const upcomingButtonStyle = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 13,
     color: ThemeColor.colorText,
   );
 }

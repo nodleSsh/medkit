@@ -32,7 +32,7 @@ class _UpcomingBlocConstructState extends State<UpcomingBlocConstruct> {
             ),
             Container(
               decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 167, 182, 224),
+                color: const Color.fromARGB(255, 183, 198, 240),
                 borderRadius: BorderRadius.circular(15),
               ),
               child: const Padding(
@@ -44,11 +44,7 @@ class _UpcomingBlocConstructState extends State<UpcomingBlocConstruct> {
                 ),
                 child: Text(
                   'Aug 12',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 13,
-                    color: ThemeColor.colorText,
-                  ),
+                  style: ThemeColor.upcomingButtonStyle,
                 ),
               ),
             ),
