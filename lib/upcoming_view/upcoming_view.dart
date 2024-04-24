@@ -12,7 +12,9 @@ class UpcomingView extends StatelessWidget {
       appBar: AppBar(
         leading: Builder(builder: (BuildContext context) {
           return IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed('/upcoming_view');
+            },
             icon: const Icon(
               Icons.keyboard_arrow_left,
             ),

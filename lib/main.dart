@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/upcoming': (context) => const UpcomingView(),
         '/current': (context) => const CurrentView(),
         '/find': (context) => const FindView(),
+        '/upcoming_view': (context) => const HomePage(),
       },
       initialRoute: '/start',
     );

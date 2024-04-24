@@ -50,16 +50,22 @@ class _UpcomingViewListState extends State<UpcomingViewList> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Align(
-                          child: Text.rich(
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 1,
-                            TextSpan(
-                              text: widget.name,
-                              style: const TextStyle(
-                                fontSize: 17,
-                                color: ThemeColor.colorText,
-                                fontWeight: FontWeight.w700,
+                        Container(
+                          child: ConstrainedBox(
+                            constraints:
+                                const BoxConstraints.tightFor(width: 150),
+                            child: Align(
+                              child: Text.rich(
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                                TextSpan(
+                                  text: widget.name,
+                                  style: const TextStyle(
+                                    fontSize: 16,
+                                    color: ThemeColor.colorText,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
                               ),
                             ),
                           ),

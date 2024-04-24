@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medkit/resources/resources.dart';
+import 'package:medkit/start/button.dart';
 
 class StartPageWidget extends StatefulWidget {
   const StartPageWidget({super.key});
@@ -9,16 +10,12 @@ class StartPageWidget extends StatefulWidget {
 }
 
 class _StartPageWidgetState extends State<StartPageWidget> {
-  void _startMed() {
-    Navigator.of(context).pushReplacementNamed('/home');
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Stack(
         children: [
-          const Column(
+          Column(
             children: [
               SizedBox(
                 height: 30,
@@ -51,36 +48,9 @@ class _StartPageWidgetState extends State<StartPageWidget> {
               ),
             ],
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.only(right: 15, left: 15, bottom: 10),
-                child: Container(
-                  width: double.infinity,
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255, 19, 24, 49),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    onPressed: _startMed,
-                    child: const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text(
-                        'Start',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+          Button(
+            path: '/home',
+            text: 'Start',
           ),
         ],
       ),

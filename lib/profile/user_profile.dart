@@ -9,6 +9,18 @@ class UserProfile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 30,
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacementNamed('/upcoming_view');
+              },
+              icon: const Icon(
+                Icons.keyboard_arrow_left,
+              ),
+            );
+          },
+        ),
       ),
       body: const UserProfilePage(),
     );

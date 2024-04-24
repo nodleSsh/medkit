@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:medkit/profile/emergency_button.dart';
 import 'package:medkit/profile/user_list.dart';
 import 'package:medkit/resources/resources.dart';
+import 'package:medkit/start/button.dart';
 import 'package:medkit/theme/theme_color.dart';
 
 class UserProfilePage extends StatelessWidget {
@@ -137,35 +138,9 @@ class UserProfilePage extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                      Align(
-                        //вынести в отдельный виджет тк кнопка переиспользуется со стартового виджета
-                        alignment: Alignment.bottomCenter,
-                        child: SafeArea(
-                          child: Container(
-                            width: double.infinity,
-                            child: TextButton(
-                              style: TextButton.styleFrom(
-                                backgroundColor:
-                                    const Color.fromARGB(255, 19, 24, 49),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                              ),
-                              onPressed: () {},
-                              child: const Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Edit details',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                      const Button(
+                        path: '/',
+                        text: 'Edit details',
                       ),
                     ],
                   ),
